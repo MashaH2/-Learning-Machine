@@ -1,0 +1,38 @@
+import getpass
+
+
+while True:
+    Player1 = getpass.getpass('Player #1 please choose a number between 0 - 100: ')
+
+    try:
+        x = int(Player1)
+    except:
+        print('Not a numeric value homie :3')
+        continue
+        
+    if x > 100:
+        print ("Border, that's waaaaaaay above the parameters")
+    else:
+        break
+
+while True:
+    Player2 = input("Players # 2 please proceed to guess Player #1's number: ")
+
+    try:
+        y = int(Player2)
+    except:
+        print("Don't mess with me haas, that aint no number")
+        continue
+
+    if y > 100:
+        print ("Border, that's waaaaaaay above the parameters")
+        continue
+    elif y > x :
+        print(" Oooop, its a little too high, guess below", y)
+        continue
+    elif y < x :
+        print ('Yyayaya, thats a little too low, guess above', y,)
+        continue
+    elif y == x :
+        print ("Kaching my dude, go get yourself some ice cream, you're the winner")
+        quit()
